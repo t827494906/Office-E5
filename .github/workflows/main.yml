@@ -35,15 +35,15 @@ jobs:
       run: |
         java -jar ./officeE5-1.0-SNAPSHOT-jar-with-dependencies.jar "$CLIENT_ID" "$USERNAME" "$PASSWORD" "$TENANT_GUID" "$CLIENT_SECRET"  >> ./run.log
         tail run.log   
-    - name: Commit log
-      env:
-        NAME: t827494906
-        EMAIL: t827494906@outlook.com
-      run: |
-        git config --global user.name "$NAME"
-        git config --global user.email "$EMAIL"
-        git add .
-        git commit -m "update log" -a
+    # - name: Commit log
+    #   env:
+    #     NAME: t827494906
+    #     EMAIL: t827494906@outlook.com
+    #   run: |
+    #     git config --global user.name "$NAME"
+    #     git config --global user.email "$EMAIL"
+    #     git add .
+    #     git commit -m "update log" -a
     # - name: Push log
     #   uses: ad-m/github-push-action@master
     #   with:
